@@ -29,12 +29,14 @@ export default function ButtonAppBar() {
           <IconButton edge="start" className={classes.menuButton} color="#FGR" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          
+      
           <Typography variant="h6" className={classes.title}>
           <Link to="/" >
             <div style={{color:"white"}}>Hercules</div>          
           </Link>
           </Typography>
+          <Link to="/user" style={{ color: '#FFF' }}>Users C'mon Here</Link>
+          &nbsp; &nbsp;
         </Toolbar>
       </AppBar>
     </div>
