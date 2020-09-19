@@ -49,10 +49,10 @@ class Main extends Component {
                     <div className="content mr-auto ml-auto">
                     <p>&nbsp;</p>
                     <center>
-                    <p>Welcome, {this.state.user.userAddress}</p>
-                    <h1 style={{color: "royalblue"}}>Home-Automation</h1>
+                    <p style={{color: "white"}}>Welcome, {this.state.user.userAddress}</p>
+                    <h2 style={{color: "white"}}>Home-Automation</h2>
                     <br/><br/>
-                    <h2>Enter your Bolt IoT Device Credentials</h2>
+                    <h2 style={{color: "white"}}>Enter your Bolt IoT Device Credentials</h2>
                     <Form onSubmit={async(event) => {
                         event.preventDefault()
                         this.setState({ device_id: this.devid.value })
@@ -83,32 +83,32 @@ class Main extends Component {
                     <p>&nbsp;&nbsp;</p>
                     <br/><br/>
                     <div class="coupon">
-                        <h3>Switch 0</h3>
+                        <h3 style={{color: "white"}}>Switch 0</h3>
                         <Button variant="success" name="0" onClick={this.switchOn}>On</Button>{' '}
                         <Button variant="danger" name="0" onClick={this.switchOff}>Off</Button>
                     </div>
                     <p>&nbsp;&nbsp;</p>
                     <div class="coupon">
-                        <h3>Switch 1</h3>
+                        <h3 style={{color: "white"}}>Switch 1</h3>
                         <Button variant="success" name="1" onClick={this.switchOn}>On</Button>{' '}
                         <Button variant="danger" name="1" onClick={this.switchOff}>Off</Button>
                     </div>
                     <p>&nbsp;&nbsp;</p>
                     <div class="coupon">
-                        <h3>Switch 2</h3>
+                        <h3 style={{color: "white"}}>Switch 2</h3>
                         <Button variant="success" name="2" onClick={this.switchOn}>On</Button>{' '}
                         <Button variant="danger" name="2" onClick={this.switchOff}>Off</Button>
                     </div>
                     <p>&nbsp;&nbsp;</p> 
                     <div class="coupon">
-                        <h3>Switch 3</h3>
+                        <h3 style={{color: "white"}}>Switch 3</h3>
                         <Button variant="success" name="3" onClick={this.switchOn}>On</Button>{' '}
                         <Button variant="danger" name="3" onClick={this.switchOff}>Off</Button>
                     </div>
                     <p>&nbsp;&nbsp;</p>  
                     <br/><br/>
-                    <p>Units you have consumed: {this.state.user.units.toString()} units</p>
-                    <p>Amount due: {parseInt(this.state.user.units.toString())*0.01} ETH</p>
+                    <p style={{color: "white"}}>Units you have consumed: {this.state.user.units.toString()} units</p>
+                    <p style={{color: "white"}}>Amount due: {parseInt(this.state.user.units.toString())*0.01} ETH</p>
                     <Button variant="info" name="3" onClick={(event) => {
                               let amount = this.state.user.units.toString()*10000000000000000
                               this.props.payBill(amount)
@@ -127,7 +127,7 @@ class Main extends Component {
                     <div className="content mr-auto ml-auto">
                     <p>&nbsp;</p>
                     <center>
-                    <h1 style={{color: "royalblue"}}>Home-Automation</h1>
+                    <h1 style={{color: "white"}}>Home-Automation</h1>
                     <br/><br/>
                     <Button variant="outline-info" onClick={(event) => {this.props.initializeUser()}}>Add me as New User</Button>
                     </center>

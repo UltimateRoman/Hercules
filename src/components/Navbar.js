@@ -24,7 +24,7 @@ export default function ButtonAppBar() {
   const Link = require("react-router-dom").Link;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" style={{ backgroundColor: '#006400' }}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="#FGR" aria-label="menu">
             <MenuIcon />
