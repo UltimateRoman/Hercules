@@ -5,7 +5,7 @@ import Hercules from '../abis/Hercules.json';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './App.css';
-
+import home from './Home';
 class App extends Component {
 
   async componentWillMount() {
@@ -51,9 +51,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="back">
         <Router>   
         <Navbar />
+        <Route exact path="/" component={home} />
         
         <Footer />
         </Router>
