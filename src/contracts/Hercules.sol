@@ -1,27 +1,48 @@
 pragma solidity ^0.5.0;
 
 contract Hercules {
-    mapping(address => uint) public powerConsumed;
+    uint userCount=0;
+    mapping(uint => User) public users;
+
+    struct User {
+        address payable userAddress;
+        uint units;
+    }
 
     event userInitialized(
-        uint powerConsmed,
-        address user 
+        address payable userAddress, 
+        uint units
     );
 
     event unitsAdded (
-        uint powerConsmed,
-        address user 
+        address payable userAddress, 
+        uint units
+    );
+
+    event billPaid (
+        address payable deployer,
+        address payable user,
+        uint units,
+        uint amount
     );
 
     function initialzeUser() public {
-        powerConsumed[msg.sender]=0;
-        emit userInitialized(0,msg.sender);
+        userCount++;
+        users[userCount].userAddress=msg.sender;
+        users[userCount].units=0;
+        emit userInitialized(users[userCount].userAddress,users[userCount].units);
     }
-    function addUnit(uint _units) public {
+    function addUnit(uint _id, uint _units) public {
         require(_units >= 0);
-        uint _power = powerConsumed[msg.sender];
-        _power = _power + _units;
-        powerConsumed[msg.sender] = _power;
-        emit unitsAdded(_power,msg.sender);
+        User memory _user = users[_id];
+        _user.units = _user.units + _units;
+        users[_id] = _user;
+        emit unitsAdded(users[_id].userAddress,users[_id].units);
+    }
+    function payBill(uint _id) public payable {
+        address payable _deployer = users[0].userAddress;
+        address(_deployer).transfer(msg.value);
+        users[_id].units=0;
+        emit billPaid(_deployer,users[_id].userAddress,users[_id].units,msg.value);
     }
 }
