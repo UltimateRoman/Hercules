@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import './App.css';
 import home from './Home';
+import Main from './Main';
 class App extends Component {
 
   async componentWillMount() {
@@ -35,6 +36,14 @@ class App extends Component {
     if(networkData) {
       const hdp = web3.eth.Contract(Hercules.abi, networkData.address)
       this.setState({ hdp })
+      const uCount = await hdp.methods.uCount().call()
+      this.setState({ uCount })
+      for (var i = 1; i <= uCount; i++) {
+        const user = await hdp.methods.users(i).call()
+        this.setState({
+          users: [...this.state.users, user]
+        })
+      }
       this.setState({ loading: false})
     } else {
       window.alert('The dapp contract could not be deployed to network')
@@ -45,6 +54,9 @@ class App extends Component {
     super(props)
     this.state = {
       account: '',
+      hdp: null,
+      uCount: 0,
+      users: [],
       loading: true
     }
   }
@@ -55,7 +67,14 @@ class App extends Component {
         <Router>   
         <Navbar />
         <Route exact path="/" component={home} />
-        
+        <Route exact path="/user" render={props => (
+          <React.Fragment>
+            { this.state.loading
+            ? <center><br/><br/><br/><br/><br/><br/><div class="loader"></div></center>
+            : <Main/>
+            }
+          </React.Fragment>
+        )} />
         <Footer />
         </Router>
       </div>

@@ -5447,10 +5447,87 @@
       "links": {},
       "address": "0x191D6260F9A155D5786BED24Db7B3e92Fc96Dc3a",
       "transactionHash": "0xa2110527accf2c1172a888ec82259425e2d0df9b15511a1a9964a3d98886e0ff"
+    },
+    "1600501114676": {
+      "events": {
+        "0xc217499589f3ec1d5b2891594c80d8e6493c0ea24a503908b460cc5a806e9f69": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "deployer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "billPaid",
+          "type": "event"
+        },
+        "0x67e297ce148baa913004962a221038182733513c90bed1844b68af987d279350": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "unitsAdded",
+          "type": "event"
+        },
+        "0xdee422879ee893c447f80ab59301c0983b5967aa619d66ddb326481b6efe2baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "userInitialized",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x281dcae791B47Cd1e9762F1C33bF2e74CA803563",
+      "transactionHash": "0x0afb4e4e4e974864f2ebf4bb31a965224edabfeb3a9934c7fe1e6661b143e715"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-09-19T07:24:16.678Z",
+  "updatedAt": "2020-09-19T07:39:33.916Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
