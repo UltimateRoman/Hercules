@@ -12,13 +12,20 @@ function Home() {
         
             
             <p2>
-            <h6 style={{color: "black"}}>Hercules allows you to pay your electricity bills in the safest and most reliable way using blockchain.</h6>
+            <h4 style={{color: "black"}}>Hercules allows you to pay your electricity bills in the safest and most reliable way using blockchain.</h4>
             
-            <h6 style={{color: "black"}}>Herculus is very transparent to the user in all ways. It lets the users analyse the electricity consumed by them, their transactions and everything in between.</h6>
-            
+            <h4 style={{color: "black"}}>Herculus is very transparent to the user in all ways. It lets the users analyse the electricity consumed by them, their transactions and everything in between. The users are given all the untouched data about the electricity consumed and the conversion rates too.</h4>
+            <br></br>
             </p2>
+            <p>Using blockchain provides our consumers with the added benefit of very low transaction fees for international payments. Standard wire transfers and foreign purchases typically involve fees and exchange costs. Since bitcoin transactions have no intermediary institutions or government involvement, the costs of transacting are kept very low. This can be a major advantage for travelers. Additionally, any transfer in bitcoins happens very quickly, eliminating the inconvenience of typical authorization requirements and wait periods. </p>
+            <p>Payments made using the virtual currency save substantially on processing fees and eliminate the risk of charge-backs. For oru customers, the advantages of paying with bitcoin include greater simplicity in placing the transaction, user anonymity, no interruptions from intermediaries, and very low transaction fees.</p>
             <p3>
-            <h6 style={{color: "black"}}>Legit Advantages we received by incorporating blockchain to our transaction process</h6>
+            <img src={logo} align="bottom" width="500" height="500" alt="1"/>
+            <img src={logo1} align="right" width="500" height="500" alt="2"/>
+            
+            <br></br>
+            <br></br>
+            <h4 style={{color: "black"}}>Legit Advantages we received by incorporating blockchain to our transaction process</h4>
             <ol>
                 <li>The blockchain technology allows for verification without having to be dependent on third-parties.</li>
                 <li>The data structure in a blockchain is append-only. So, the data cannot be altered or deleted.</li>
@@ -30,8 +37,7 @@ function Home() {
             </p3>
             
             
-            <img src={logo} align="bottom" width="500" height="500" alt="1"/>
-            <img src={logo1} align="right" width="500" height="500" alt="2"/>
+            
         </div>
       
     </React.Fragment>
