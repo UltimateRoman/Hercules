@@ -109,7 +109,10 @@ class Main extends Component {
                     <br/><br/>
                     <p>Units you have consumed: {this.state.user.units.toString()} units</p>
                     <p>Amount due: {parseInt(this.state.user.units.toString())*0.01} ETH</p>
-                    <Button variant="info" name="3">Pay Now</Button>                 
+                    <Button variant="info" name="3" onClick={(event) => {
+                              let amount = this.state.user.units.toString()*10000000000000000
+                              this.props.payBill(amount)
+                    }}>Pay Now</Button>                 
                     </center>
                     </div>
               </main>
