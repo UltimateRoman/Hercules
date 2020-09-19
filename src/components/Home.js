@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import logo from '../pic.jpg'
 import logo1 from '../piccc.jpg'
+
 function Home() {
   return (  
     

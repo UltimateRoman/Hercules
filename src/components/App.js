@@ -50,6 +50,33 @@ class App extends Component {
     }
   }
 
+  initializeUser() {
+    this.setState({ loading: true })
+    this.state.hdp.methods.initializeUser().send({ from: this.state.account })
+    .once('confirmation', (n, receipt) => {
+      this.setState({ loading: false })
+      window.location.reload()
+    })
+  }
+
+  addUnit(units) {
+    this.setState({ loading: true })
+    this.state.hdp.methods.addUnit(units).send({ from: this.state.account })
+    .once('confirmation', (n, receipt) => {
+      this.setState({ loading: false })
+      window.location.reload()
+    })
+  }
+
+  payBill() {
+    this.setState({ loading: true })
+    this.state.hdp.methods.payBill().send({ from: this.state.account })
+    .once('confirmation', (n, receipt) => {
+      this.setState({ loading: false })
+      window.location.reload()
+    })
+  }
+
   constructor(props) {
     super(props)
     this.state = {
@@ -59,6 +86,9 @@ class App extends Component {
       users: [],
       loading: true
     }
+    this.initializeUser = this.initializeUser.bind(this)
+    this.addUnit = this.addUnit.bind(this)
+    this.payBill = this.payBill.bind(this)
   }
 
   render() {
@@ -66,12 +96,17 @@ class App extends Component {
       <div className="back">
         <Router>   
         <Navbar />
-        <Route exact path="/" component={home} />
+        <Route exact path="/" component={home} />        
         <Route exact path="/user" render={props => (
           <React.Fragment>
             { this.state.loading
             ? <center><br/><br/><br/><br/><br/><br/><div class="loader"></div></center>
-            : <Main/>
+            : <Main
+              users={this.state.users}
+              initializeUser={this.initializeUser}
+              addUnit={this.addUnit}
+              payBill={this.payBill}
+            />
             }
           </React.Fragment>
         )} />

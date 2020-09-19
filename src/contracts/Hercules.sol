@@ -26,7 +26,7 @@ contract Hercules {
         uint amount
     );
 
-    function initialzeUser() public {
+    function initializeUser() public {
         uCount++;
         users[uCount] = User(msg.sender, 0);
         emit userInitialized(uCount, msg.sender, 0);
