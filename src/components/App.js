@@ -68,9 +68,9 @@ class App extends Component {
     })
   }
 
-  payBill() {
+  payBill(amount) {
     this.setState({ loading: true })
-    this.state.hdp.methods.payBill().send({ from: this.state.account })
+    this.state.hdp.methods.payBill().send({ from: this.state.account, value: amount })
     .once('confirmation', (n, receipt) => {
       this.setState({ loading: false })
       window.location.reload()
