@@ -5827,10 +5827,314 @@
       "links": {},
       "address": "0x12268B350277bC93a3ad3034569e1D02ad8BAb2E",
       "transactionHash": "0x65df814ac6d95e0cc07604bc919658ea541ff9d39637b2c58bfa224f624fdf88"
+    },
+    "1600531404959": {
+      "events": {
+        "0xc217499589f3ec1d5b2891594c80d8e6493c0ea24a503908b460cc5a806e9f69": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "deployer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "billPaid",
+          "type": "event"
+        },
+        "0x67e297ce148baa913004962a221038182733513c90bed1844b68af987d279350": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "unitsAdded",
+          "type": "event"
+        },
+        "0xdee422879ee893c447f80ab59301c0983b5967aa619d66ddb326481b6efe2baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "userInitialized",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xeF9FD1A0447198af24fFEAc1441A7CCCAf60375C",
+      "transactionHash": "0xd8e9eee4da3c7cd8ddf858566386c05f56b5c62733b71a8e34dafb65267ab148"
+    },
+    "1600532519856": {
+      "events": {
+        "0xc217499589f3ec1d5b2891594c80d8e6493c0ea24a503908b460cc5a806e9f69": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "deployer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "billPaid",
+          "type": "event"
+        },
+        "0x67e297ce148baa913004962a221038182733513c90bed1844b68af987d279350": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "unitsAdded",
+          "type": "event"
+        },
+        "0xdee422879ee893c447f80ab59301c0983b5967aa619d66ddb326481b6efe2baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "userInitialized",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xFA8cBd0968f038CDD8065E813DE835C3E154B9ed",
+      "transactionHash": "0x0323713de0f6a4a186bef22825bca4674734c7508bd403582f7abb02ecf700e1"
+    },
+    "1600534103480": {
+      "events": {
+        "0xc217499589f3ec1d5b2891594c80d8e6493c0ea24a503908b460cc5a806e9f69": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "deployer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "billPaid",
+          "type": "event"
+        },
+        "0x67e297ce148baa913004962a221038182733513c90bed1844b68af987d279350": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "unitsAdded",
+          "type": "event"
+        },
+        "0xdee422879ee893c447f80ab59301c0983b5967aa619d66ddb326481b6efe2baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "userInitialized",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xE1932077399Bbf82b70B3883689ffD431eCeeAE1",
+      "transactionHash": "0xad80bc62ce445f651644eebbfe76dbb18d06a40381f072ee9e5798c09302d56b"
+    },
+    "1600538387857": {
+      "events": {
+        "0xc217499589f3ec1d5b2891594c80d8e6493c0ea24a503908b460cc5a806e9f69": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "deployer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "billPaid",
+          "type": "event"
+        },
+        "0x67e297ce148baa913004962a221038182733513c90bed1844b68af987d279350": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "unitsAdded",
+          "type": "event"
+        },
+        "0xdee422879ee893c447f80ab59301c0983b5967aa619d66ddb326481b6efe2baa": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "userAddress",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "units",
+              "type": "uint256"
+            }
+          ],
+          "name": "userInitialized",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xD851F6bE21C95e3BFB06D05a1A9dF097043deA1C",
+      "transactionHash": "0x0048d26aa76c32a8c3a3c4d85324280407a807fafc13fddb7ed6730b16c8350b"
     }
   },
   "schemaVersion": "3.2.0",
-  "updatedAt": "2020-09-19T13:21:56.331Z",
+  "updatedAt": "2020-09-19T18:00:27.090Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
