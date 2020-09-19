@@ -34,7 +34,7 @@ export default function StickyFooter() {
       
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography align="center" variant="body1">Hercules : Pay your electricity bills in the smartest way possible using Herculues where a secure and reliable transaction is assured.</Typography>
+          <Typography align="center" variant="body1">Hercules : Pay your electricity bills in the smartest way possible using Hercules where a secure and reliable transaction is assured.</Typography>
           <Typography align="center" variant="body2">© 2020 Delta_Codinators</Typography>
         </Container>
       </footer>

@@ -10,10 +10,7 @@ function Home() {
             <h1 align="center" >Hercules </h1> 
             <h3 align="center" style={{color: "darkblue"}}>By Delta_Codinators </h3>
         
-            <p1>
-            <h6 style={{color: "blue"}}></h6>
             
-            </p1>
             <p2>
             <h6 style={{color: "black"}}>Hercules allows you to pay your electricity bills in the safest and most reliable way using blockchain.</h6>
             
@@ -33,8 +30,8 @@ function Home() {
             </p3>
             
             
-            <img src={logo} align="bottom" width="500" height="500" />
-            <img src={logo1} align="right" width="500" height="500" />
+            <img src={logo} align="bottom" width="500" height="500" alt="1"/>
+            <img src={logo1} align="right" width="500" height="500" alt="2"/>
         </div>
       
     </React.Fragment>

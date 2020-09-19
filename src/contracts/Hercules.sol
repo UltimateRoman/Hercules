@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 contract Hercules {
-    uint userCount=0;
+    uint public uCount=0;
     mapping(uint => User) public users;
 
     struct User {
@@ -10,6 +10,7 @@ contract Hercules {
     }
 
     event userInitialized(
+        uint id,
         address payable userAddress, 
         uint units
     );
@@ -22,27 +23,41 @@ contract Hercules {
     event billPaid (
         address payable deployer,
         address payable user,
-        uint units,
         uint amount
     );
 
     function initialzeUser() public {
-        userCount++;
-        users[userCount].userAddress=msg.sender;
-        users[userCount].units=0;
-        emit userInitialized(users[userCount].userAddress,users[userCount].units);
+        uCount++;
+        users[uCount] = User(msg.sender, 0);
+        emit userInitialized(uCount, msg.sender, 0);
     }
-    function addUnit(uint _id, uint _units) public {
+    function addUnit(uint _units) public {
         require(_units >= 0);
-        User memory _user = users[_id];
+        uint _i;
+        User memory _user;
+        for(_i=1;_i<=uCount;++_i)
+            if(users[_i].userAddress==msg.sender)
+            {
+                _user=users[_i];
+                break;
+            }
         _user.units = _user.units + _units;
-        users[_id] = _user;
-        emit unitsAdded(users[_id].userAddress,users[_id].units);
+        users[_i] = _user;
+        emit unitsAdded(msg.sender,_units);
     }
-    function payBill(uint _id) public payable {
+    function payBill() public payable {
         address payable _deployer = users[0].userAddress;
         address(_deployer).transfer(msg.value);
-        users[_id].units=0;
-        emit billPaid(_deployer,users[_id].userAddress,users[_id].units,msg.value);
+        uint _i;
+        User memory _user;
+        for(_i=1;_i<=uCount;++_i)
+            if(users[_i].userAddress==msg.sender)
+            {
+                _user=users[_i];
+                break;
+            }
+        _user.units=0;
+        users[_i] = _user;
+        emit billPaid(_deployer,msg.sender,msg.value);
     }
 }
