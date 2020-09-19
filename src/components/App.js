@@ -102,6 +102,7 @@ class App extends Component {
             { this.state.loading
             ? <center><br/><br/><br/><br/><br/><br/><div class="loader"></div></center>
             : <Main
+              account={this.state.account}
               users={this.state.users}
               initializeUser={this.initializeUser}
               addUnit={this.addUnit}
