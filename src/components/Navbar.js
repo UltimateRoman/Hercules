@@ -1,64 +1,42 @@
-import React, { Component } from 'react';
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBContainer
-} from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-class Navbar extends Component {
-  state = {
-    collapseID: ''
-  };
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 3,
+  },
+  
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 2,
+  },
+}));
 
-  toggleCollapse = collapseID => () => {
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ''
-    }));
-  };
-
-  render() {
-    return (
-      <Router>
-        <MDBContainer>
-          <MDBNavbar
-            color='light-blue lighten-4'
-            style={{ marginTop: '20px' }}
-            light
-          >
-            <MDBContainer>
-              <MDBNavbarBrand>Navbar</MDBNavbarBrand>
-              <MDBNavbarToggler
-                onClick={this.toggleCollapse('navbarCollapse1')}
-              />
-              <MDBCollapse
-                id='navbarCollapse1'
-                isOpen={this.state.collapseID}
-                navbar
-              >
-                <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <MDBNavLink to='#Home'>Home</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to='#!'>Sign in</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to='#!'>Admin</MDBNavLink>
-                  </MDBNavItem>
-                </MDBNavbarNav>
-              </MDBCollapse>
-            </MDBContainer>
-          </MDBNavbar>
-        </MDBContainer>
-      </Router>
-    );
-  }
+export default function ButtonAppBar() {
+  const classes = useStyles();
+  const Link = require("react-router-dom").Link;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="secondary">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="#FGR" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          
+          <Typography variant="h6" className={classes.title}>
+          <Link to="/" >
+            <div style={{color:"white"}}>Hercules</div>          
+          </Link>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
-
-export default Navbar;
