@@ -58,4 +58,4 @@ For performing Home Automation features of Hercules, a Bolt Wi-Fi Module is requ
 - Enter your Bolt device credentials in the '/user' page now and click 'update'.
 - Enjoy Home-Automation with Hercules using the buttons provided.
 - Units you have consumed will be calculated and bill amount is set accordingly.
-- Pay the bill once when wish to.
+- Pay the bill once you wish to.
