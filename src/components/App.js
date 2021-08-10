@@ -110,7 +110,7 @@ class App extends Component {
             />
             }
           </React.Fragment>
-        )} />
+          )} />
         <Footer />
         </Router>
       </div>
